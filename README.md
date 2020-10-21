@@ -2,7 +2,7 @@
 
 1. Download the package for your operating system into a directory 
 
-   <img src="https://img.shields.io/github/v/release/cohere-ai/blobheart-cli-release?color=ff71ce&style=flat-square"/> 
+   <img src="https://img.shields.io/github/v/release/cohere-ai/blobheart-cli?color=ff71ce&style=flat-square"/> 
 
    <table> 
      <th> 
@@ -16,8 +16,8 @@
          MacOS (x86)
        </td>
        <td> 
-         <a href="https://github.com/cohere-ai/blobheart-cli-release/releases/latest/download/blobheart-cli-release_macos_x86_64.tar.gz"> 
-           blobheart-cli-release_macos_x86_64.tar.gz
+         <a href="https://github.com/cohere-ai/blobheart-cli/releases/latest/download/blobheart-cli-release_macos_x86_64.tar.gz"> 
+           blobheart-cli_macos_x86_64.tar.gz
          </a>
        </td>
      </tr>
@@ -26,8 +26,8 @@
          Linux (x86)
        </td>
        <td> 
-         <a href="https://github.com/cohere-ai/blobheart-cli-release/releases/latest/download/blobheart-cli-release_linux_x86_64.tar.gz"> 
-           blobheart-cli-release_linux_x86_64.tar.gz
+         <a href="https://github.com/cohere-ai/blobheart-cli/releases/latest/download/blobheart-cli-release_linux_x86_64.tar.gz"> 
+           blobheart-cli_linux_x86_64.tar.gz
          </a>
        </td>
      </tr>
@@ -36,8 +36,8 @@
          Linux (arm64)
        </td>
        <td> 
-         <a href="https://github.com/cohere-ai/blobheart-cli-release/releases/latest/download/blobheart-cli-release_linux_arm64.tar.gz"> 
-           blobheart-cli-release_linux_arm64.tar.gz
+         <a href="https://github.com/cohere-ai/blobheart-cli/releases/latest/download/blobheart-cli-release_linux_arm64.tar.gz"> 
+           blobheart-cli_linux_arm64.tar.gz
          </a>
        </td>
      </tr>
@@ -46,8 +46,8 @@
          Linux (arm32)
        </td>
        <td> 
-         <a href="https://github.com/cohere-ai/blobheart-cli-release/releases/latest/download/blobheart-cli-release_linux_arm32.tar.gz"> 
-           blobheart-cli-release_linux_arm32.tar.gz
+         <a href="https://github.com/cohere-ai/blobheart-cli/releases/latest/download/blobheart-cli-release_linux_arm32.tar.gz"> 
+           blobheart-cli_linux_arm32.tar.gz
          </a>
        </td>
      </tr>
