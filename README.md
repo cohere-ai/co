@@ -16,7 +16,7 @@
          MacOS (x86)
        </td>
        <td> 
-         <a href="https://github.com/cohere-ai/blobheart-cli/releases/latest/download/blobheart-cli-release_macos_x86_64.tar.gz"> 
+         <a href="https://github.com/cohere-ai/blobheart-cli/releases/latest/download/blobheart-cli_macos_x86_64.tar.gz"> 
            blobheart-cli_macos_x86_64.tar.gz
          </a>
        </td>
@@ -26,7 +26,7 @@
          Linux (x86)
        </td>
        <td> 
-         <a href="https://github.com/cohere-ai/blobheart-cli/releases/latest/download/blobheart-cli-release_linux_x86_64.tar.gz"> 
+         <a href="https://github.com/cohere-ai/blobheart-cli/releases/latest/download/blobheart-cli_linux_x86_64.tar.gz"> 
            blobheart-cli_linux_x86_64.tar.gz
          </a>
        </td>
@@ -36,7 +36,7 @@
          Linux (arm64)
        </td>
        <td> 
-         <a href="https://github.com/cohere-ai/blobheart-cli/releases/latest/download/blobheart-cli-release_linux_arm64.tar.gz"> 
+         <a href="https://github.com/cohere-ai/blobheart-cli/releases/latest/download/blobheart-cli_linux_arm64.tar.gz"> 
            blobheart-cli_linux_arm64.tar.gz
          </a>
        </td>
@@ -46,7 +46,7 @@
          Linux (arm32)
        </td>
        <td> 
-         <a href="https://github.com/cohere-ai/blobheart-cli/releases/latest/download/blobheart-cli-release_linux_arm32.tar.gz"> 
+         <a href="https://github.com/cohere-ai/blobheart-cli/releases/latest/download/blobheart-cli_linux_arm32.tar.gz"> 
            blobheart-cli_linux_arm32.tar.gz
          </a>
        </td>
