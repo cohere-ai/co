@@ -58,7 +58,7 @@
 3. Run the installation script in the zip. 
 
    ```
-   ./blobheart-cli-release/install.sh
+   ./cmd/blobheart/install.sh
    ```
 
 4. Happy Hacking!
