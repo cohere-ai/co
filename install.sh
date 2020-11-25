@@ -56,25 +56,20 @@ else
     err "must have either curl or wget installed"
 fi
 
-DLDURL="https://github.com/cohere-ai/blobheart-cli/releases/latest/download/blobheart-cli_$ARCH.tar.gz"
+DLD_URL="https://github.com/cohere-ai/blobheart-cli/releases/latest/download/blobheart-cli_$ARCH.tar.gz"
+DLD_OUTPUT="blobheart-install-temp.tar.gz"
+INSTALL_PATH="$HOME/.cohere/blobheart"
 
-case ":$PATH:" in
-    *:/usr/local/bin:*)
-        INSTALLPATH=${INSTALLPATH:-/usr/local/bin}
-        ;;
-    *)
-        err "could not find /usr/local/bin in $PATH"
-esac
-
-DLDOUTPUT="blobheart-install-temp.tar.gz"
-INSTALLPATH="${INSTALLPATH}/blobheart"
+mkdir -p $HOME/.cohere
+echo PATH="$HOME/.cohere/" >> $HOME/.profile
+source $HOME/.profile
 
 if [ "$DLDCMD" = curl ]; then
-    curl --silent --show-error --fail --location $DLDURL --output $DLDOUTPUT
+    curl --silent --show-error --fail --location $DLD_URL --output $DLD_OUTPUT
 elif [ "$_dld" = wget ]; then
-    wget $DLDURL -O $DLDOUTPUT
+    wget $DLD_URL -O $DLD_OUTPUT
 fi
 
-tar -xf $DLDOUTPUT
-mv blobheart $INSTALLPATH
-rm $DLDOUTPUT
+tar -xf $DLD_OUTPUT
+mv blobheart $INSTALL_PATH
+rm $DLD_OUTPUT
