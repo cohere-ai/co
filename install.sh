@@ -67,8 +67,8 @@ case ":$PATH:" in
         err "could not find /usr/local/bin in $PATH"
 esac
 
-
-DLDOUTPUT="${INSTALLPATH}/blobheart"
+DLD_OUTPUT=blobheart-install-temp.tar.gz
+INSTALLPATH="${INSTALLPATH}/blobheart"
 
 if [ "$DLDCMD" = curl ]; then
     curl --silent --show-error --fail --location $DLDURL --output $DLDOUTPUT
@@ -76,4 +76,5 @@ elif [ "$_dld" = wget ]; then
     wget $DLD_URL -O $DLDOUTPUT
 fi
 
+tar -xf $DLD_OUTPUT -C $INSTALLPATH
 chmod a+x $DLDOUTPUT
