@@ -62,7 +62,6 @@ INSTALL_PATH="$HOME/.cohere/blobheart"
 
 mkdir -p $HOME/.cohere
 echo PATH="$HOME/.cohere/" >> $HOME/.profile
-source $HOME/.profile
 
 if [ "$DLDCMD" = curl ]; then
     curl --silent --show-error --fail --location $DLD_URL --output $DLD_OUTPUT
