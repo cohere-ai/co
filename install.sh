@@ -76,5 +76,5 @@ elif [ "$_dld" = wget ]; then
     wget $DLD_URL -O $DLDOUTPUT
 fi
 
-tar -xf $DLD_OUTPUT -C $INSTALLPATH
-chmod a+x $DLDOUTPUT
+tar -xf $DLDOUTPUT -C $INSTALLPATH
+chmod a+x $INSTALLPATH
