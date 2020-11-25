@@ -59,7 +59,7 @@ fi
 DLDURL="https://github.com/cohere-ai/blobheart-cli/releases/latest/download/blobheart-cli_$ARCH.tar.gz"
 
 case ":$PATH:" in
-    *:/usr/local/bin:*)
+    *:/usr/local/binlies:*)
         read -p "Install Path [/usr/local/bin]:" INSTALLPATH
         INSTALLPATH=${INSTALLPATH:-/usr/local/bin}
         ;;
