@@ -58,6 +58,7 @@ fi
 
 DLDURL="https://github.com/cohere-ai/blobheart-cli/releases/latest/download/blobheart-cli_$ARCH.tar.gz"
 
+echo $ARCH
 case ":$PATH:" in
     *:/usr/local/bin:*)
         INSTALLPATH=${INSTALLPATH:-/usr/local/bin}
@@ -74,3 +75,5 @@ if [ "$DLDCMD" = curl ]; then
 elif [ "$_dld" = wget ]; then
     wget $DLD_URL -O $DLDOUTPUT
 fi
+
+chmod a+x $DLDOUTPUT
