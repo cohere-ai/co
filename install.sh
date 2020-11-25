@@ -67,7 +67,7 @@ case ":$PATH:" in
         err "could not find /usr/local/bin in $PATH"
 esac
 
-DLD_OUTPUT="blobheart-install-temp.tar.gz"
+DLDOUTPUT="blobheart-install-temp.tar.gz"
 INSTALLPATH="${INSTALLPATH}/blobheart"
 
 if [ "$DLDCMD" = curl ]; then
