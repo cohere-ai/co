@@ -59,12 +59,11 @@ fi
 DLDURL="https://github.com/cohere-ai/blobheart-cli/releases/latest/download/blobheart-cli_$ARCH.tar.gz"
 
 case ":$PATH:" in
-    *:/usr/local/binlies:*)
-        read -p "Install Path [/usr/local/bin]:" INSTALLPATH
+    *:/usr/local/bin:*)
         INSTALLPATH=${INSTALLPATH:-/usr/local/bin}
         ;;
     *)
-        read -p "Install Path:" INSTALLPATH
+        err "could not find /usr/local/bin in $PATH"
 esac
 
 
