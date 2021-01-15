@@ -58,31 +58,6 @@ fi
 
 DLD_URL="https://github.com/cohere-ai/blobheart-cli/releases/latest/download/blobheart-cli_$ARCH.tar.gz"
 DLD_OUTPUT="blobheart-install-temp.tar.gz"
-INSTALL_PATH="$HOME/.cohere/blobheart"
-PROFILE_FILE=""
-
-mkdir -p $HOME/.cohere
-if [ -f "$HOME/.config/fish/config.fish" ]; then
-    PROFILE_FILE="$HOME/.config/fish/config.fish"
-elif [ -f "$HOME/.zshrc" ]; then
-    PROFILE_FILE="$HOME/.zshrc"
-elif [ -f "$HOME/.bash_profile" ]; then
-    PROFILE_FILE="$HOME/.bash_profile"
-elif [ -f "$HOME/.bashrc" ]; then
-    PROFILE_FILE="$HOME/.bashrc"
-elif [ -f "$HOME/.profile" ]; then
-    PROFILE_FILE="$HOME/.profile"
-else
-    err "could not file a shell profile file"
-fi
-
-echo $PROFILE_FILE
-
-echo "" >> $PROFILE_FILE
-echo "# <<< cohere initialize <<<" >> $PROFILE_FILE
-echo "export PATH=\"$HOME/.cohere/:$PATH\"" >> $PROFILE_FILE
-
-export PATH="$HOME/.cohere/:$PATH"
 
 if [ "$DLDCMD" = curl ]; then
     curl --silent --show-error --fail --location $DLD_URL --output $DLD_OUTPUT
@@ -91,5 +66,6 @@ elif [ "$_dld" = wget ]; then
 fi
 
 tar -xf $DLD_OUTPUT
-mv blobheart $INSTALL_PATH
 rm $DLD_OUTPUT
+
+echo "blobheart binary now located at $PWD/blobheart"
