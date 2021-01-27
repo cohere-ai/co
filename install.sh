@@ -56,8 +56,8 @@ else
     err "must have either curl or wget installed"
 fi
 
-DLD_URL="https://github.com/cohere-ai/blobheart-cli/releases/latest/download/blobheart-cli_$ARCH.tar.gz"
-DLD_OUTPUT="blobheart-install-temp.tar.gz"
+DLD_URL="https://github.com/cohere-ai/co/releases/latest/download/co_$ARCH.tar.gz"
+DLD_OUTPUT="co-install-temp.tar.gz"
 
 if [ "$DLDCMD" = curl ]; then
     curl --silent --show-error --fail --location $DLD_URL --output $DLD_OUTPUT
@@ -68,4 +68,4 @@ fi
 tar -xf $DLD_OUTPUT
 rm $DLD_OUTPUT
 
-echo "blobheart binary now located at $PWD/blobheart"
+echo "co: binary now located at $PWD/co:"
