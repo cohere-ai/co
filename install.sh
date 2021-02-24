@@ -69,3 +69,5 @@ tar -xf $DLD_OUTPUT
 rm $DLD_OUTPUT
 
 echo "co: binary now located at $PWD/co:"
+echo "to update, run the following"
+echo "    mv $PWD/co: $(which co:)"
