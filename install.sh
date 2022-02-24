@@ -1,3 +1,7 @@
+readonly _MAC_OS_TYPE="macos"
+readonly _ARM64_CPU_TYPE="arm64"
+readonly _X86_64_CPU_TYPE="x86_64"
+
 err() {
     echo "$1"
     exit 1
@@ -20,7 +24,7 @@ get_architecture() {
             ;;
 
         Darwin)
-            _ostype=macos
+            _ostype="$_MAC_OS_TYPE"
             ;;
         *)
             err "unsupported OS type: $_ostype"
@@ -29,17 +33,22 @@ get_architecture() {
     esac
 
     case "$_cputype" in
-        aarch64)
-            _cputype=arm64
+        aarch64 | arm64)
+            _cputype="$_ARM64_CPU_TYPE"
             ;;
 
         x86_64 | x86-64 | x64 | amd64)
-            _cputype=x86_64
+            _cputype="$_X86_64_CPU_TYPE"
             ;;
         *)
             err "unsupported CPU type: $_cputype"
 
     esac
+
+    if [ "$_ostype" = "$_MAC_OS_TYPE" ] && [ "$_cputype" = "$_ARM64_CPU_TYPE" ]; then
+      echo "Current machine appears to be Apple Silicon (an arm64 MacOS binary does not yet exist). Downloading the $_X86_64_CPU_TYPE MacOS binary instead..."
+      _cputype="$_X86_64_CPU_TYPE"
+    fi
 
     _arch="${_ostype}_${_cputype}"
     RETVAL="$_arch"
