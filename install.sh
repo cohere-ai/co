@@ -80,7 +80,7 @@ rm $DLD_OUTPUT
 echo "Cohere CLI was downloaded to $PWD/co"
 if (which co > /dev/null 2>&1)
 then
-    echo "It looks like you already have the co CLI installed,
+    echo "It looks like the co CLI is already installed,
 to update, run the following:
     sudo mv $PWD/co $(which co)
 "
