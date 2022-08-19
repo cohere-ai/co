@@ -77,6 +77,14 @@ fi
 tar -xf $DLD_OUTPUT
 rm $DLD_OUTPUT
 
-echo "co: binary now located at $PWD/co:"
-echo "to update, run the following"
-echo "    mv $PWD/co: $(which co:)"
+echo "Cohere CLI was downloaded to $PWD/co"
+if (which co > /dev/null 2>&1)
+then
+    echo "It looks like the co CLI is already installed,
+to update, run the following:
+    sudo mv $PWD/co $(which co)
+"
+else
+    echo "Copy it somewhere in your PATH eg: 
+    mkdir -p /usr/local/bin/ && sudo mv $PWD/co /usr/local/bin/co"
+fi
